@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nathan and Joe's Page!!</title>
+  </head>
+
+  <body>
+    <h1>List of Actors</h1>
+    <ul>
+      <% @actor_list.each do |actor| %>
+          <li><a href="/actors/<%= actor['id'] %>"><%= actor["name"] %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

@@ -41,4 +41,3 @@ feature 'user sees movies' do
     expect(first_movie_position).to be < last_movie_position
   end
 end
-

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nathan and Joe's Page!!</title>
+  </head>
+
+  <body>
+    <h1>List of Movies</h1>
+    <ul>
+      <% @movie_list.each do |movie| %>
+          <li><a href = "movies/<%= movie['id'] %>"><%= movie["title"] %> </a>
+            <p><%= movie['genre_name'] %></p>
+            <p><%= movie['year'] %></p>
+            <p><%= movie['rating'] %></p>
+            <p><%= movie['studio_name'] %></p>
+          </li>
+      <% end %>
+    </ul>
+  </body>
+</html>

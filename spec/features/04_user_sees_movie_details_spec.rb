@@ -52,4 +52,3 @@ feature 'user sees movie details' do
     expect(page).to have_css("a[href='/actors/1']")
   end
 end
-

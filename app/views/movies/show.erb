@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nathan and Joe's Page!!</title>
+  </head>
+
+  <body>
+    <h1> <%= @movie_actor.first['title'] %> </h1>
+    <p> <%= @movie_actor.first['genre'] %></p>
+    <p> <%= @movie_actor.first['studio'] %></p>
+    <p> <%= @movie_actor.first['year'] %></p>
+    <p> <%= @movie_actor.first['rating'] %></p>
+    <ul>
+      <% @movie_actor.each do |item| %>
+        <li>
+          <p> <a href="/actors/<%= item['actor_id'] %>"><%= item['actor_name'] %></a> <%= item['character'] %> </p>
+        </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
