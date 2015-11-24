@@ -5,8 +5,25 @@
   </head>
 
   <body>
+
+    <form for='order'>
+      <input type="hidden" name="order" value="year">
+      <input type="submit" value='Order By Year'>
+    </form>
+    <form for='order'>
+      <input type="hidden" name="order" value="rating">
+      <input type="submit" value='Order By Rating'>
+    </form>
+
+    <% @page_count.times do |i| %>
+    <form for='order'>
+      <input type="hidden" name="page" value="<%= i + 1 %>">
+      <input type="submit" value="<%= i + 1 %>">
+    </form>
+    <% end  %>
+
     <h1>List of Movies</h1>
-    <ul>
+    <ol>
       <% @movie_list.each do |movie| %>
           <li><a href = "movies/<%= movie['id'] %>"><%= movie["title"] %> </a>
             <p><%= movie['genre_name'] %></p>
@@ -15,6 +32,7 @@
             <p><%= movie['studio_name'] %></p>
           </li>
       <% end %>
-    </ul>
+    </ol>
+
   </body>
 </html>
